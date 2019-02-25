@@ -1,0 +1,20 @@
+{
+  "name": "server-quizz",
+  "version": "1.0.0",
+  "description": "Beautiful Server",
+  "main": "index.js",
+  "scripts": {
+    "database": "mongod --smallfiles",
+    "server": "nodemon server.js",
+    "reinitDB": "mongo localhost:27017/quizz db/data.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.4",
+    "nodemon": "^1.18.9"
+  }
+}
