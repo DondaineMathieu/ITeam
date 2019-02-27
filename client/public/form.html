@@ -10,7 +10,7 @@
 
 <body>
 
-    <!-- login form -->
+    {/* login form */}
     <form>
         <div class="form-group">
             <label for="InputEmail1">Email address</label>
@@ -28,10 +28,12 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
-    <!-- form to create a quizz -->
+    {/* form to create a quizz */}
+
+    {/* form question */}
 
     <form>
-        <div class="form-row">
+        <div class="form-row form_question">
 
             <div class="form-group col-md-4">
                 <label for="inputState">Select a media type for the question</label>
@@ -42,9 +44,9 @@
                 </select>
             </div>
 
-            <!-- if media type is define, import it or type it  -->
+            {/* if media type is define, import it or type it  */}
 
-            <!-- Question type -->
+            {/* Question type */}
             <div class="form-group col-md-8">
                 <label for="InputEmail1">Type your question</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="questionHelp"
@@ -52,7 +54,7 @@
                 <small id="questionHelp" class="form-text text-muted">Question have to be small and simple.</small>
             </div>
 
-            <!-- Video type  -->
+            {/* Video type  */}
 
             <div class="form-group">
                 <label for="exampleFormControlFile1">Upload your video</label>
@@ -60,7 +62,7 @@
                 <small id="videoHelp" class="form-text text-muted">The video must not exceed 30 seconds</small>
             </div>
 
-            <!-- Photo type -->
+            {/* Photo type */}
 
             <div class="form-group">
                 <label for="exampleFormControlFile1">Upload your photo</label>
@@ -68,8 +70,44 @@
             </div>
         </div>
 
+        <div class="form-row form_answer">
 
-        Valider le formulaire
+                <div class="form-group col-md-4">
+                    <label for="inputState">Select a media type for the answers</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Image</option>
+                        <option>Question</option>
+                    </select>
+                </div>
+    
+                {/* if media type is define, import it or type it  */}
+    
+                {/* Question type */}
+                <div class="form-group col-md-8">
+                    <label for="inputAnswer1">Type your Answer</label>
+                    <input type="answer" class="form-control" id="inputAnswer1" aria-describedby="answerHelp"
+                        placeholder="Enter answer here">
+                    <small id="questionHelp" class="form-text text-muted">Answer have to be small and simple.</small>
+                </div>
+    
+                {/* Video type  */}
+    
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Upload your video</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" aria-describedby="videoHelp">
+                    <small id="videoHelp" class="form-text text-muted">The video must not exceed 30 seconds</small>
+                </div>
+    
+                {/* Photo type */}
+    
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Upload your photo</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+            </div>
+
+
+        {/* Valider le formulaire */}
         <div class="form-group">
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="gridCheck">
