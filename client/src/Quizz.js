@@ -75,7 +75,7 @@ class Quizz extends Component {
     render() {
         if(this.state.current == this.quizz.questions.length) 
         return (
-            <div>
+            <div>>
                 <h1> Your final score is : {this.score} </h1>
             </div>
         );

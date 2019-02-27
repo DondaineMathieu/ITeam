@@ -26,7 +26,41 @@
 }
 
 /*zoning style*/
+.main {
+  color: rgba(10, 10, 10, 0);
+}
+
+.header {
+  color: white;
+  background-image: -webkit-gradient(linear, left top, right top, from(#858EFE), to(#AC78E8));
+  background-image: linear-gradient(to right, #858EFE, #AC78E8);
+}
+
+footer {
+  color: white;
+  background-image: -webkit-gradient(linear, left top, right top, from(#858EFE), to(#AC78E8));
+  background-image: linear-gradient(to right, #858EFE, #AC78E8);
+}
+
 .aside {
   background-color: #94C6E8;
 }
+
+/*text*/
+h1, h2, h3, h4, h5 {
+  font-family: "Baloo", cursive;
+}
+
+p {
+  font-family: "Muli", sans-serif;
+}
+
+/*icon*/
+.icon {
+  font-family: icomoon;
+  font-size: 1rem;
+  color: white;
+}
+
+/*Quiz*/
 /*# sourceMappingURL=elements.css.map */
