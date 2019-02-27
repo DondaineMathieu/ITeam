@@ -27,4 +27,21 @@
     color: white;
     background-color: #94C6E8;
 }
+
+.box img{
+
+  height: 300px;
+  width: 300px;  
+}
+.one_question
+{
+  border: 1em;
+  border-color: red;
+   float:left;
+   margin-left: 1em;
+}
+
+.checkbox{
+  border-radius: 12px;}
+}
 /*# sourceMappingURL=style.css.map */

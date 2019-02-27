@@ -22,8 +22,8 @@ class Question extends Component {
             <form>
                 <div><h1>{q.question}</h1>
                     <h3></h3>
-                    {q.txtAnswers.map(txt => <div><input type='checkbox' /> {txt}</div>)}
-                    {q.imgAnswers.map(img => <div><input type='checkbox' /> <img src={HTTP_SERVER_PORT_PICTURES + img} /> </div>)}
+                    {q.txtAnswers.map(txt => <div><button className="checkbox">q</button>{txt}</div>)}
+                    {q.imgAnswers.map(img => <div><input type='checkbox' /> <img  src={HTTP_SERVER_PORT_PICTURES + img} /> </div>)}
 
                     {bp}
                     {ba}
@@ -59,11 +59,11 @@ class Quizz extends Component {
         this.setState({ current: newIndex });
     }
 
-    calculScore() {
+   /* calculScore() {
         if(this.question.solution == checkedAnswers) {
             this.prompt.score = this.prompt.score+this.question.points;
         }
-    }
+    }*/
 
     render() {
         return (
@@ -74,8 +74,8 @@ class Quizz extends Component {
                     questions={this.quizz.questions}
                     nextQuestion={() => this.nextQuestion()}
                     previousQuestion={() => this.previousQuestion()}
-                    calculScore={() => this.calculScore()}
-                    score={0}
+                   /* calculScore={() => this.calculScore()}
+                    score={0}*/
                 />
             </div>
         )
