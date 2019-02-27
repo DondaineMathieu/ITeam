@@ -1,0 +1,47 @@
+@import 'variables';
+
+/*ico*/
+.icon-logo {
+    color : white;
+}
+
+/*Buttons*/
+
+.btn {
+    border-radius: 50%;
+    font-family: $defaultFont;
+    color: white;
+}
+
+.btn_darkPurple{
+    background-color: $darkPurple;
+}
+.btn_purple{
+    background-color: $darkPurple;
+}
+.btn_grad{
+    background-image: $blueGrad;
+}
+
+/*zoning style*/
+
+.main{
+
+}
+
+.header{
+
+}
+
+.footer{
+
+}
+
+.aside {
+    background-color: $blue;
+}
+
+
+
+
+
