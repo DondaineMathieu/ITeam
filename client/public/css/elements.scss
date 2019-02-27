@@ -1,9 +1,25 @@
 @import 'variables';
 
-/*ico*/
-.icon-logo {
-    color : white;
+
+html,
+body {
+    height: 100%;
+    margin: 0;
 }
+
+/*ico*/
+.logoQuiz {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    z-index: 3;
+    .icon-logo {
+        color:$purple;
+        font-size:10vh;
+    
+    }
+}
+
 
 /*Buttons*/
 
@@ -13,30 +29,44 @@
     color: white;
 }
 
-.btn_darkPurple{
+.btn_darkPurple {
     background-color: $darkPurple;
 }
-.btn_purple{
+
+.btn_purple {
     background-color: $darkPurple;
 }
-.btn_grad{
+
+.btn_grad {
     background-image: $blueGrad;
 }
 
 /*zoning style*/
 
-.main{
+.main {
     color: $dark;
 }
 
-.header{
-    color:white;
-    background-image:$purpleGrad;
+.header {
+    color: white;
+    background-image: $purpleGrad;
 }
 
-footer{
-    color:white;
-    background-image:$purpleGrad;
+footer {
+    height: 10vh ;
+    color: white;
+    background-image: $purpleGrad;
+    .col-4{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .icon {
+        font-size: 6vh;
+        margin-top:2vh;
+        margin-bottom: 2vh;
+    }
 }
 
 .aside {
@@ -45,7 +75,11 @@ footer{
 
 /*text*/
 
-h1,h2,h3,h4,h5{
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: $titleFont;
 }
 
@@ -57,20 +91,62 @@ p {
 
 .icon {
     font-family: icomoon;
-    font-size: 1rem;
-    color : white;
+    color: white;
 }
 
 /*Quiz*/
 
-.textAnswer{
+.quiz{
+    height: 90vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
 
+    align-items: stretch;
+    flex-wrap: wrap;
 }
 
-.imgAnswer{
+.textQuestion {
+    flex: 50%;
+    
+    left: 0;
+    right: 0;
+    top: 60px;
+    bottom: 0;
 
+    .question {
+        font-family: $titleFont !important;
+    }
 }
 
+.videoQuestion {
+    height: 50vh;
+    flex-wrap: wrap;
+    .question {
+        font-family: $titleFont !important;
+    }
+     .card{
+        overflow:hidden;
+         height: 50vh;
 
+     }
+img {
+	max-width:100%;
+	max-height:100%;
+}
+}
 
+.textAnswer {
+    flex: 50%;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
 
+.imgAnswer {
+    flex: 50%;
+    margin-top: 2rem;
+
+}
