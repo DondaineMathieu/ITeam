@@ -55,15 +55,160 @@ h1, h2, h3, h4, h5 {
   font-family: "Baloo", cursive;
 }
 
-p {
-  font-family: "Muli", sans-serif;
+.box img{
+
+  height: 300px;
+  width: 300px;  
+}
+.one_question
+{
+  border: 1em;
+  border-color: red;
+   float:left;
+   margin-left: 1em;
 }
 
-/*icon*/
-.icon {
-  font-size: 1rem;
-  color: white;
+.checkbox{
+  border-radius: 12px;
 }
 
-/*Quiz*/
+.homeText1{
+float: left;
+font-size: 40px;
+}
+
+.homeImg1{
+float: right;
+height: 10em;
+}
+
+.homeText2{
+  float: right;
+}
+  
+.homeImg2{
+  float: left;
+}
+
+
+
+
+
+.HomeTitle{
+  text-align: center;
+font-size: 100px;
+padding-bottom: 10px;
+
+  
+}
+
+.HomeHeader{
+
+  background-color: turquoise;
+  margin-top: -6em;
+  margin-left: -2em;
+  margin-right: -2em;
+  
+  
+}
+.HomeHeader img{
+  height: 170px;
+  width: 170px;
+
+}
+
+.favi{
+  height: 110px;
+  width: 110px;
+  float: left;
+}
+
+.imageSquare img{
+  background-color: blue;
+  opacity: .2;
+}
+#img1{
+  height :300px;
+  float: right;
+}
+
+
+
+
+
+
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;</div>
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+}
+
+.box img{
+  height: 470px;
+width:470px;}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.box h2{
+  font-size: 70px;
+}
+
+
+
+
 /*# sourceMappingURL=style.css.map */
