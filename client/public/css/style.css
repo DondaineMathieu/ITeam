@@ -1,7 +1,13 @@
 /*colors*/
 /*background-image*/
 @import url("https://fonts.googleapis.com/css?family=Baloo|Muli");
+/*colors*/
+/*background-image*/
 /*ico*/
+.icon-logo {
+  color: white;
+}
+
 /*Buttons*/
 .btn {
   border-radius: 50%;
@@ -23,9 +29,30 @@
 }
 
 /*zoning style*/
+.main {
+  color: rgba(10, 10, 10, 0);
+}
+
+.header {
+  color: white;
+  background-image: -webkit-gradient(linear, left top, right top, from(#858EFE), to(#AC78E8));
+  background-image: linear-gradient(to right, #858EFE, #AC78E8);
+}
+
+footer {
+  color: white;
+  background-image: -webkit-gradient(linear, left top, right top, from(#858EFE), to(#AC78E8));
+  background-image: linear-gradient(to right, #858EFE, #AC78E8);
+  background-color: aquamarine;
+}
+
 .aside {
-    color: white;
-    background-color: #94C6E8;
+  background-color: #94C6E8;
+}
+
+/*text*/
+h1, h2, h3, h4, h5 {
+  font-family: "Baloo", cursive;
 }
 
 .box img{
@@ -65,10 +92,7 @@ height: 10em;
 
 
 
-.para{
-  margin: 20em;
-  padding: 5em;
-}
+
 
 .HomeTitle{
   text-align: center;
@@ -81,8 +105,16 @@ padding-bottom: 10px;
 .HomeHeader{
 
   background-color: turquoise;
-  margin-top: -4em;
+  margin-top: -6em;
+  margin-left: -2em;
+  margin-right: -2em;
   
+  
+}
+.HomeHeader img{
+  height: 170px;
+  width: 170px;
+
 }
 
 .favi{
@@ -93,6 +125,7 @@ padding-bottom: 10px;
 
 .imageSquare img{
   background-color: blue;
+  opacity: .2;
 }
 #img1{
   height :300px;
@@ -150,6 +183,30 @@ padding-bottom: 10px;
   .sidenav a {font-size: 18px;}
 }
 
+
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+}
+
+.box img{
+  height: 470px;
+width:470px;}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.box h2{
+  font-size: 70px;
+}
 
 
 

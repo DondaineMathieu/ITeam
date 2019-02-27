@@ -1,14 +1,21 @@
 import React, { Component } from 'react'
-import Answer from './Answer';
+import CreateQuestionQuizz from './CreateQuestionAnswer'
 
-export default class CreateQuiz extends Component {
+export default class createQuiz extends Component {
+    constructor(props) {
+      super(props)
+    
+      this.state = {
+         
+      }
+    }
+    
   render() {
     return (
       <div>
-        <Question/>
-        <Answer/>
+        <CreateQuestionQuizz/>
+        
       </div>
     )
   }
 }
-
