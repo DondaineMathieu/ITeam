@@ -18,8 +18,7 @@ const usersSchema = Schema({
   score:String
 });
 
-const quizzSchema = Schema({
-  _uid:Number,
+/*const quizzSchema = Schema({
   name:String,
   icon:String,
   keywords:[String],
@@ -36,11 +35,21 @@ const quizzSchema = Schema({
   published:Boolean,
 
 
+});*/
+
+const quizzesSchema = mongoose.Schema({
+  name: String,
+  icon: String,
+  keywords: [],
+  questions: [],
+  published: Boolean,
+  ownerId: Schema.Types.ObjectId,
+  scores: []
 });
 
 // exports
 const Users = mongoose.model('Users', usersSchema);
-const Quizz=mongoose.model("Quizz",quizzSchema);
+const Quizzes=mongoose.model("Quizzes",quizzesSchema);
 module.exports = {};
 module.exports.users = Users;
-module.exports.quizz=Quizz;
+module.exports.quizzes=Quizzes;

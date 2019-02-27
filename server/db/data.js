@@ -1,5 +1,5 @@
-db.quizes.drop();
-db.quizes.insert({
+db.quizzes.drop();
+db.quizzes.insert({
     name: 'quizz1',
   icon: 'quizz1/quizz1.jpg',
   keywords: ['kitchen', 'english'],
