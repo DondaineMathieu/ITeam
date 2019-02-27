@@ -1,10 +1,37 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 
-export default class createAnswer extends Component {
+export default class Answer extends Component {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       type:""
+    }
+  }
+  
+  render() {
+    if (this.state.type=="image"){
+      let theAnswer = <div className="form-group">
+        <label for="exampleFormControlFile1">Upload your photo</label>
+        <input type="file" className="form-control-file" id="exampleFormControlFile1">
+        </div>
+    }
+    else {
+
+    }
+    return (
+      <Fragment>
+        {theAnswer}
+      </Fragment>
+    )
+  }
+}
+
+export default class CreateAnswer extends Component {
   constructor(props) {
     super(props)
 
-    const answerId=this.props.id
+    let answerId=this.props.id
   
     this.state = {
 
@@ -13,13 +40,9 @@ export default class createAnswer extends Component {
   
   render() {
     return (
-        <div className="form-row form_answer">
-          <div className="form-group col-md-8">
-                <label for={"inputAnswer"+this.answerId}>Type your Answer</label>
-                <input type="answer" className="form-control" id={"inputAnswer"+this.answerId} ariaDescribedby="answerHelp" placeholder="Enter answer here"></input>
-                <small id={"answerHelp"+this.answerId} className="form-text text-muted">Answer have to be small and simple.</small>
-            </div>
-        </div>
+      <div>
+
+      </div>
     )
   }
 }

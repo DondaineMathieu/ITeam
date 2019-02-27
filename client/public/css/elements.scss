@@ -26,21 +26,50 @@
 /*zoning style*/
 
 .main{
-
+    color: $dark;
 }
 
 .header{
-
+    color:white;
+    background-image:$purpleGrad;
 }
 
-.footer{
-
+footer{
+    color:white;
+    background-image:$purpleGrad;
 }
 
 .aside {
     background-color: $blue;
 }
 
+/*text*/
+
+h1,h2,h3,h4,h5{
+    font-family: $titleFont;
+}
+
+p {
+    font-family: $defaultFont;
+}
+
+/*icon*/
+
+.icon {
+    font-family: icomoon;
+    font-size: 1rem;
+    color : white;
+}
+
+/*Quiz*/
+
+.textAnswer{
+
+}
+
+.imgAnswer{
+
+}
 
 
 

@@ -112,6 +112,7 @@ class Quizz extends Component {
                 <div> <h1> Your final score is : {this.state.score}</h1> </div>
             );
         }
+
         return (
             <div>
                 <h1> {this.state.quizz.name} </h1>
