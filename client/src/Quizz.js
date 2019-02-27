@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { quizzes, users } from './examples';
 import { Link } from 'react-router-dom';
-
 import { HTTP_SERVER_PORT_PICTURES } from './constants.js';
 
 
@@ -16,7 +15,7 @@ class Question extends Component {
         const q = this.props.questions[c];
         const bp = c > 0 ? <input type="button" value="Previous questions" onClick={this.props.previousQuestion} /> : null;
         const ba = c < this.props.questions.length - 1 ? <input type="button" value="Next Question" onClick={this.props.nextQuestion} /> : <input type="button" value="See results" onClick={this.props.result} />;
-        const bv = <input type="button" onClick={ this.props.calculScore } />
+        // const bv = <input type="button" onClick={ this.props.calculScore } />
 
         return (
             <form>
@@ -25,9 +24,10 @@ class Question extends Component {
                     {q.txtAnswers.map(txt => <div><button className="checkbox">q</button>{txt}</div>)}
                     {q.imgAnswers.map(img => <div><input type='checkbox' /> <img  src={HTTP_SERVER_PORT_PICTURES + img} /> </div>)}
 
-                    {bp}
-                    {ba}
-                    {bv}
+                    {bp}    {/* Button previous Question */}
+                    <input type="button" value="Validate" onClick={(e) => this.props.Validate(e)} />
+                    {ba}    {/* Button next Question */}
+                    {/* {bv} */}
 
                     {/*   if (question.state == null) {
                   <input type="button" value="Validate" onClick="validate()" />      
@@ -38,7 +38,6 @@ class Question extends Component {
             </form>
         )
     }
-
 }
 
 class Quizz extends Component {
@@ -47,6 +46,7 @@ class Quizz extends Component {
         super(props);
         this.quizz = quizzes.filter(q => q._uid == this.props.match.params.id)[0];
         this.state = { current: 0 };
+        this.Validate = this.Validate.bind(this);
     }
 
     nextQuestion() {
@@ -59,13 +59,32 @@ class Quizz extends Component {
         this.setState({ current: newIndex });
     }
 
+<<<<<<< HEAD
    /* calculScore() {
         if(this.question.solution == checkedAnswers) {
             this.prompt.score = this.prompt.score+this.question.points;
+=======
+    Validate() {
+        let newState = "validated";
+        this.setState({ state: newState });
+        this.calculScore();
+        this.setState({current : this.state.current + 1});
+    }
+
+    calculScore() {
+        if (/*this.question.solution == checkedAnswers*/ true) {
+           // this.prompt.score = this.prompt.score + this.question.points;
+>>>>>>> a87042cc9e8d516274552463456bc1024e9a0281
         }
     }*/
 
     render() {
+        if(this.state.current == this.quizz.questions.length) 
+        return (
+            <div>
+                <h1> Your final score is : {this.score} </h1>
+            </div>
+        );
         return (
             <div>
                 <h1> {this.quizz.name} </h1>
@@ -74,8 +93,14 @@ class Quizz extends Component {
                     questions={this.quizz.questions}
                     nextQuestion={() => this.nextQuestion()}
                     previousQuestion={() => this.previousQuestion()}
+<<<<<<< HEAD
                    /* calculScore={() => this.calculScore()}
                     score={0}*/
+=======
+                    // calculScore={() => this.calculScore()}
+                    score={0}
+                    Validate = {this.Validate}
+>>>>>>> a87042cc9e8d516274552463456bc1024e9a0281
                 />
             </div>
         )

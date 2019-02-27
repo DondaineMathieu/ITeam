@@ -1,10 +1,7 @@
 import React, {Component} from 'react';
-
 import {quizzes, users} from './examples';
 import {HTTP_SERVER_PORT_PICTURES} from './constants.js';
-
 import {BrowserRouter, Switch, Route} from "react-router-dom";
-
 import Home from "./Home.js";
 import About from "./About.js";
 import Quizz from "./Quizz.js";
