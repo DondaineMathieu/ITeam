@@ -1,7 +1,10 @@
 /*colors*/
 /*background-image*/
-@import url("https://fonts.googleapis.com/css?family=Baloo|Muli");
 /*ico*/
+.icon-logo {
+  color: white;
+}
+
 /*Buttons*/
 .btn {
   border-radius: 50%;
@@ -24,7 +27,6 @@
 
 /*zoning style*/
 .aside {
-    color: white;
-    background-color: #94C6E8;
+  background-color: #94C6E8;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=elements.css.map */
