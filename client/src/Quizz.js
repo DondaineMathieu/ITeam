@@ -40,7 +40,6 @@ class Quizz extends Component {
     constructor(props) {
         super(props);
         let tmp = [];
-       
         this.state = { current: 0, score:0, toValidate : [], quizz : null};
         this.validate = this.validate.bind(this);
         this.loadData();
@@ -49,6 +48,12 @@ class Quizz extends Component {
     async loadData() {
         const quizz = (await axios.get(HTTP_SERVER_PORT + 'quiz/'+this.props.match.params.id)).data;  // We need to wait for the response.
         this.setState({quizz: quizz});
+        let tmp = [];
+        for(let i = 0; i < quizz.questions.length;i++) {
+            
+            tmp.push(i);
+        }
+        this.setState({toValidate : tmp});
       }                
           
     nextQuestion() {
@@ -87,14 +92,14 @@ class Quizz extends Component {
         }
     }
 
-    // for(let i = 0; i < this.state.quizz.questions.length;i++)
-    // tmp.push(i);
-
     render() {
-        if(this.state.quizz==null) 
+        if(this.state.quizz==null) {
             return (
                 <div>Wait for data</div>
             );
+        } else {
+            
+        }
 
         console.log(this.state.toValidate);
         if(this.state.toValidate.length > 0 && this.state.current == this.state.quizz.questions.length) {
