@@ -3,9 +3,31 @@
 @import url("https://fonts.googleapis.com/css?family=Baloo|Muli");
 /*colors*/
 /*background-image*/
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 /*ico*/
-.icon-logo {
-  color: white;
+.logoQuiz {
+  position: fixed;
+  top: 1vh;
+  left: 1vh;
+  z-index: 3;
+}
+
+.logoQuiz .icon-logo {
+  color: #AC78E8;
+  font-size: 10vh;
+  opacity: 0.40;
+}
+
+.logoQuiz .icon-logo:hover {
+  color: #858EFE;
+  opacity: 1;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 /*Buttons*/
@@ -40,10 +62,30 @@
 }
 
 footer {
+  height: 10vh;
   color: white;
   background-image: -webkit-gradient(linear, left top, right top, from(#858EFE), to(#AC78E8));
   background-image: linear-gradient(to right, #858EFE, #AC78E8);
-  background-color: aquamarine;
+}
+
+footer .col-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+footer .icon {
+  font-size: 6vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 .aside {
@@ -51,7 +93,11 @@ footer {
 }
 
 /*text*/
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: "Baloo", cursive;
 }
 
@@ -68,147 +114,195 @@ h1, h2, h3, h4, h5 {
    margin-left: 1em;
 }
 
-.checkbox{
-  border-radius: 12px;
-}
-
-.homeText1{
-float: left;
-font-size: 40px;
-}
-
-.homeImg1{
-float: right;
-height: 10em;
-}
-
-.homeText2{
-  float: right;
-}
-  
-.homeImg2{
-  float: left;
-}
-
-
-
-
-
-.HomeTitle{
-  text-align: center;
-font-size: 100px;
-padding-bottom: 10px;
-
-  
-}
-
-.HomeHeader{
-
-  background-color: turquoise;
-  margin-top: -6em;
-  margin-left: -2em;
-  margin-right: -2em;
-  
-  
-}
-.HomeHeader img{
-  height: 170px;
-  width: 170px;
-
-}
-
-.favi{
-  height: 110px;
-  width: 110px;
-  float: left;
-}
-
-.imageSquare img{
-  background-color: blue;
-  opacity: .2;
-}
-#img1{
-  height :300px;
-  float: right;
-}
-
-
-
-
-
-
-
-
-.sidenav {
+a {
+  color: transparent !important;
+  width: 100%;
   height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
 }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
+a:hover {
+  color: transparent !important;
 }
 
-.sidenav a:hover {
-  color: #f1f1f1;</div>
+a:focus {
+  color: transparent !important;
 }
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+/*icon*/
+.icon {
+  font-family: icomoon;
+  color: white;
 }
 
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
+/*Quiz*/
+.quiz {
+  height: 90vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: hidden;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+.textQuestion {
+  top: 2vh;
+  height: 15vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
 }
 
-
-* {
-  box-sizing: border-box;
+.textQuestion .question {
+  font-family: "Baloo", cursive !important;
 }
 
-.box {
-  float: left;
-  width: 33.33%;
-  padding: 50px;
+.textQuestion .card {
+  overflow: hidden;
+  height: 20vh;
 }
 
-.box img{
-  height: 470px;
-width:470px;}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+.textQuestion .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.box h2{
-  font-size: 70px;
+.videoQuestion {
+  top: 2vh;
+  height: 50vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
 }
 
+.videoQuestion .question {
+  font-family: "Baloo", cursive !important;
+}
 
+.videoQuestion .card {
+  overflow: hidden;
+  height: 50vh;
+}
 
+.videoQuestion .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.videoQuestion img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.textAnswer {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.textAnswer .row {
+  width: 100%;
+}
+
+.textAnswer .card {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.textAnswer .card:hover {
+  color: white;
+  background-color: #AC78E8;
+}
+
+.imgAnswer {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+}
+
+.imgAnswer .row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.imgAnswer .card {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  height: 600px;
+  max-height: 30vh;
+}
+
+.imgAnswer .card:hover {
+  color: white;
+  background-color: #94C6E8;
+}
+
+.imgAnswer .card:focus {
+  color: #858EFE;
+}
+
+.imgAnswer .card:active {
+  color: #858EFE;
+}
+
+.imgAnswer .inputCard:click {
+  color: #858EFE;
+}
+
+.imgAnswer .image {
+  border-radius: 1vh;
+  margin: 10%;
+  background-size: cover;
+  background-position: center;
+  width: 80%;
+  height: 80%;
+}
+
+.imgAnswer .row,
+.imgAnswer .col-6,
+.imgAnswer .container-fluid {
+  margin: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
 
 /*# sourceMappingURL=style.css.map */
