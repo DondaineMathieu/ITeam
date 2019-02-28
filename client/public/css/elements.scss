@@ -21,6 +21,7 @@ body {
 
     }
     .icon-logo:hover {
+        color:$purpleBlue;
         opacity: 1;
         transition: all .2s ease-in-out;
     }
@@ -95,6 +96,18 @@ p {
     font-family: $defaultFont;
 }
 
+a {
+    color: transparent !important;
+    width: 100%;
+    height: 100%;
+}
+a:hover{
+    color: transparent !important;
+}
+
+a:focus{
+    color:transparent !important;
+}
 /*icon*/
 
 .icon {
@@ -206,6 +219,18 @@ p {
         background-color: $blue;
     }
 
+    .card:focus{
+        color: $purpleBlue;
+    }
+
+    .card:active{
+        color: $purpleBlue;   
+    }
+
+    .inputCard:click{
+        color: $purpleBlue;  
+    }
+
     .image {
         border-radius: 1vh;
         margin: 10%;
@@ -224,4 +249,10 @@ p {
 
     }
 
+}
+
+.result{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }

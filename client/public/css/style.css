@@ -24,6 +24,7 @@ body {
 }
 
 .logoQuiz .icon-logo:hover {
+  color: #858EFE;
   opacity: 1;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
@@ -102,6 +103,20 @@ h5 {
 
 p {
   font-family: "Muli", sans-serif;
+}
+
+a {
+  color: transparent !important;
+  width: 100%;
+  height: 100%;
+}
+
+a:hover {
+  color: transparent !important;
+}
+
+a:focus {
+  color: transparent !important;
 }
 
 /*icon*/
@@ -250,6 +265,18 @@ p {
 .imgAnswer .card:hover {
   color: white;
   background-color: #94C6E8;
+}
+
+.imgAnswer .card:focus {
+  color: #858EFE;
+}
+
+.imgAnswer .card:active {
+  color: #858EFE;
+}
+
+.imgAnswer .inputCard:click {
+  color: #858EFE;
 }
 
 .imgAnswer .image {

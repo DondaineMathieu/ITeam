@@ -109,7 +109,16 @@ class Quizz extends Component {
         }
         if(this.state.current == this.state.quizz.questions.length) {
             return (
-                <div> <h1> Your final score is : {this.state.score}</h1> </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="container-fluid">
+                            <div class="row result">
+                                <span class="icon-badge"></span>
+                                <div><h1> Your final score is : {this.state.score}</h1> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             );
         }
 
