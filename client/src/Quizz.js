@@ -65,6 +65,10 @@ class Quizz extends Component {
         this.setState({ current: newIndex });
     }
 
+   /* calculScore() {
+        if(this.question.solution == checkedAnswers) {
+            this.prompt.score = this.prompt.score+this.question.points;
+
     validate(e) {
         let newState = "validated";
         this.setState({ state: newState });
@@ -72,7 +76,7 @@ class Quizz extends Component {
         this.calculScore(e);
         this.setState({current : this.state.current + 1, toValidate : tmp});
     }
-
+*/
     calculScore(e) {
         let t = document.getElementsByClassName("myAnswers");
         let rep = [];
@@ -80,7 +84,6 @@ class Quizz extends Component {
             if (t[i].checked)
                rep.push(i);
         console.log("rep",rep);
-        //        
         const win = (rep.join() == this.state.quizz.questions[this.state.current].solutions.join() )
         if (win == true) {
             let newScore = this.state.score + this.state.quizz.questions[this.state.current].points;
@@ -108,9 +111,19 @@ class Quizz extends Component {
         }
         if(this.state.current == this.state.quizz.questions.length) {
             return (
-                <div> <h1> Your final score is : {this.state.score}</h1> </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="container-fluid">
+                            <div class="row result">
+                                <span class="icon-badge"></span>
+                                <div><h1> Your final score is : {this.state.score}</h1> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             );
         }
+
         return (
             <div>
                 <h1> {this.state.quizz.name} </h1>
@@ -120,7 +133,7 @@ class Quizz extends Component {
                     nextQuestion={() => this.nextQuestion()}
                     previousQuestion={() => this.previousQuestion()}
                     score={0}
-                    validate = {this.validate}
+                    Validate = {this.Validate}
                 />
             </div>
         )

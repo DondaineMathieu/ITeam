@@ -1,3 +1,20 @@
 @import 'variables';
 @import url('https://fonts.googleapis.com/css?family=Baloo|Muli');
 @import 'elements';
+$img_size : 300px;
+$float_margin : 1em;
+
+
+.box img{
+    
+      height: $img_size;
+      width: $img_size;  
+    }
+    .one_question
+    {
+      
+       float:left;
+       margin-left: float_margin;
+    }
+
+    

@@ -1,7 +1,35 @@
 /*colors*/
 /*background-image*/
 @import url("https://fonts.googleapis.com/css?family=Baloo|Muli");
+/*colors*/
+/*background-image*/
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 /*ico*/
+.logoQuiz {
+  position: fixed;
+  top: 1vh;
+  left: 1vh;
+  z-index: 3;
+}
+
+.logoQuiz .icon-logo {
+  color: #AC78E8;
+  font-size: 10vh;
+  opacity: 0.40;
+}
+
+.logoQuiz .icon-logo:hover {
+  color: #858EFE;
+  opacity: 1;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
 /*Buttons*/
 .btn {
   border-radius: 50%;
@@ -23,10 +51,120 @@
 }
 
 /*zoning style*/
-.aside {
-    color: white;
-    background-color: #94C6E8;
+.main {
+  color: rgba(10, 10, 10, 0);
 }
+
+.header {
+  color: white;
+  background-image: -webkit-gradient(linear, left top, right top, from(#858EFE), to(#AC78E8));
+  background-image: linear-gradient(to right, #858EFE, #AC78E8);
+}
+
+footer {
+  height: 10vh;
+  color: white;
+  background-image: -webkit-gradient(linear, left top, right top, from(#858EFE), to(#AC78E8));
+  background-image: linear-gradient(to right, #858EFE, #AC78E8);
+}
+
+footer .col-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+footer .icon {
+  font-size: 6vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.aside {
+  background-color: #94C6E8;
+}
+
+/*text*/
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Baloo", cursive;
+}
+
+.box img{
+
+  height: 300px;
+  width: 300px;  
+}
+.one_question
+{
+  border: 1em;
+  border-color: red;
+   float:left;
+   margin-left: 1em;
+}
+
+a {
+  color: transparent !important;
+  width: 100%;
+  height: 100%;
+}
+
+a:hover {
+  color: transparent !important;
+}
+
+a:focus {
+  color: transparent !important;
+}
+
+/*icon*/
+.icon {
+  font-family: icomoon;
+  color: white;
+}
+
+/*Quiz*/
+.quiz {
+  height: 90vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: hidden;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.textQuestion {
+  top: 2vh;
+  height: 15vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+}
+
+.textQuestion .question {
+  font-family: "Baloo", cursive !important;
+}
+<<<<<<< HEAD
 /*zoning style*/
 .main {
   color: rgba(10, 10, 10, 0);
@@ -211,3 +349,147 @@ width:470px;}
 
 
  
+=======
+
+.textQuestion .card {
+  overflow: hidden;
+  height: 20vh;
+}
+
+.textQuestion .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.videoQuestion {
+  top: 2vh;
+  height: 50vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+}
+
+.videoQuestion .question {
+  font-family: "Baloo", cursive !important;
+}
+
+.videoQuestion .card {
+  overflow: hidden;
+  height: 50vh;
+}
+
+.videoQuestion .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.videoQuestion img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.textAnswer {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.textAnswer .row {
+  width: 100%;
+}
+
+.textAnswer .card {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.textAnswer .card:hover {
+  color: white;
+  background-color: #AC78E8;
+}
+
+.imgAnswer {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+}
+
+.imgAnswer .row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.imgAnswer .card {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  height: 600px;
+  max-height: 30vh;
+}
+
+.imgAnswer .card:hover {
+  color: white;
+  background-color: #94C6E8;
+}
+
+.imgAnswer .card:focus {
+  color: #858EFE;
+}
+
+.imgAnswer .card:active {
+  color: #858EFE;
+}
+
+.imgAnswer .inputCard:click {
+  color: #858EFE;
+}
+
+.imgAnswer .image {
+  border-radius: 1vh;
+  margin: 10%;
+  background-size: cover;
+  background-position: center;
+  width: 80%;
+  height: 80%;
+}
+
+.imgAnswer .row,
+.imgAnswer .col-6,
+.imgAnswer .container-fluid {
+  margin: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/*# sourceMappingURL=style.css.map */
+>>>>>>> 01f9bd78f83f3e78a85a2c211e7e1afbdb0df8bb
