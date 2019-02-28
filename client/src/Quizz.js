@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { quizzes, users } from './examples';
 import { Link } from 'react-router-dom';
 import { HTTP_SERVER_PORT_PICTURES, HTTP_SERVER_PORT  } from './constants.js';
-
 import axios from 'axios';
 
 

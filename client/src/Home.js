@@ -16,11 +16,13 @@ class Home extends Component {
     async loadData() {
         const quizzes = (await axios.get(HTTP_SERVER_PORT + 'allquestion')).data;  // We need to wait for the response.
         this.setState({quizzes: quizzes});
-      } 
+    } 
+
     render() {
         return (
             <div>
                 <h1>test</h1>
+                <Link to={'/newQuizz'}><input type="button" value="Create a new Quizz" /></Link>
                 {this.state.quizzes.map(q => <QuizzThumbnail key={q._uid} quizz={q} />)}
                 <Link to={'/about'}>About page</Link>
             </div>
