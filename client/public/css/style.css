@@ -164,7 +164,6 @@ a:focus {
 .textQuestion .question {
   font-family: "Baloo", cursive !important;
 }
-<<<<<<< HEAD
 /*zoning style*/
 .main {
   color: rgba(10, 10, 10, 0);
@@ -173,7 +172,7 @@ a:focus {
 .header {
   color: white;
   background-image: -webkit-gradient(linear, left top, right top, from(#858EFE), to(#AC78E8));
-  background-image: linear-gradient(to right, #858EFE, #AC78E8);
+  background-image: linear-gradient(to right, #858EFE,() #AC78E8);
 }
 
 footer {
@@ -349,7 +348,6 @@ width:470px;}
 
 
  
-=======
 
 .textQuestion .card {
   overflow: hidden;
@@ -492,4 +490,3 @@ width:470px;}
 }
 
 /*# sourceMappingURL=style.css.map */
->>>>>>> 01f9bd78f83f3e78a85a2c211e7e1afbdb0df8bb
