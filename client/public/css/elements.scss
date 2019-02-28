@@ -10,13 +10,19 @@ body {
 /*ico*/
 .logoQuiz {
     position: fixed;
-    top: 40px;
-    left: 40px;
+    top: 1vh;
+    left: 1vh;
     z-index: 3;
+
     .icon-logo {
-        color:$purple;
-        font-size:10vh;
-    
+        color: $purple;
+        font-size: 10vh;
+        opacity: 0.40;
+
+    }
+    .icon-logo:hover {
+        opacity: 1;
+        transition: all .2s ease-in-out;
     }
 }
 
@@ -53,18 +59,20 @@ body {
 }
 
 footer {
-    height: 10vh ;
+    height: 10vh;
     color: white;
     background-image: $purpleGrad;
-    .col-4{
+
+    .col-4 {
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
     }
+
     .icon {
         font-size: 6vh;
-        margin-top:2vh;
+        margin-top: 2vh;
         margin-bottom: 2vh;
     }
 }
@@ -96,7 +104,7 @@ p {
 
 /*Quiz*/
 
-.quiz{
+.quiz {
     height: 90vh;
     position: relative;
     display: flex;
@@ -108,45 +116,112 @@ p {
 }
 
 .textQuestion {
-    flex: 50%;
-    
-    left: 0;
-    right: 0;
-    top: 60px;
-    bottom: 0;
+    top: 2vh;
+    height: 15vh;
+    flex-wrap: wrap;
+    text-align: center;
 
     .question {
         font-family: $titleFont !important;
+    }
+
+    .card {
+        overflow: hidden;
+        height: 20vh;
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
 .videoQuestion {
+    top: 2vh;
     height: 50vh;
     flex-wrap: wrap;
+    text-align: center;
+
     .question {
         font-family: $titleFont !important;
     }
-     .card{
-        overflow:hidden;
-         height: 50vh;
 
-     }
-img {
-	max-width:100%;
-	max-height:100%;
-}
+    .card {
+        overflow: hidden;
+        height: 50vh;
+
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
 
 .textAnswer {
     flex: 50%;
-    margin-top: 2rem;
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: space-between;
+
+    .row {
+        width: 100%;
+    }
+
+    .card {
+        transition: all .2s ease-in-out;
+    }
+
+    .card:hover {
+        color: white;
+        background-color: $purple;
+    }
 }
 
 .imgAnswer {
     flex: 50%;
-    margin-top: 2rem;
+
+    .row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        transition: all .2s ease-in-out;
+        height: 600px;
+        max-height: 30vh;
+    }
+
+    .card:hover {
+        color: white;
+        background-color: $blue;
+    }
+
+    .image {
+        border-radius: 1vh;
+        margin: 10%;
+        background-size: cover;
+        background-position: center;
+        width: 80%;
+        height: 80%;
+    }
+
+    .row,
+    .col-6,
+    .container-fluid {
+        margin: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+
+    }
 
 }

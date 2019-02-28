@@ -12,14 +12,21 @@ body {
 /*ico*/
 .logoQuiz {
   position: fixed;
-  top: 40px;
-  left: 40px;
+  top: 1vh;
+  left: 1vh;
   z-index: 3;
 }
 
 .logoQuiz .icon-logo {
   color: #AC78E8;
   font-size: 10vh;
+  opacity: 0.40;
+}
+
+.logoQuiz .icon-logo:hover {
+  opacity: 1;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 /*Buttons*/
@@ -123,23 +130,41 @@ p {
 }
 
 .textQuestion {
-  -webkit-box-flex: 50%;
-      -ms-flex: 50%;
-          flex: 50%;
-  left: 0;
-  right: 0;
-  top: 60px;
-  bottom: 0;
+  top: 2vh;
+  height: 15vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
 }
 
 .textQuestion .question {
   font-family: "Baloo", cursive !important;
 }
 
+.textQuestion .card {
+  overflow: hidden;
+  height: 20vh;
+}
+
+.textQuestion .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .videoQuestion {
+  top: 2vh;
   height: 50vh;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  text-align: center;
 }
 
 .videoQuestion .question {
@@ -151,6 +176,19 @@ p {
   height: 50vh;
 }
 
+.videoQuestion .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .videoQuestion img {
   max-width: 100%;
   max-height: 100%;
@@ -160,7 +198,6 @@ p {
   -webkit-box-flex: 50%;
       -ms-flex: 50%;
           flex: 50%;
-  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,10 +208,64 @@ p {
           justify-content: space-between;
 }
 
+.textAnswer .row {
+  width: 100%;
+}
+
+.textAnswer .card {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.textAnswer .card:hover {
+  color: white;
+  background-color: #AC78E8;
+}
+
 .imgAnswer {
   -webkit-box-flex: 50%;
       -ms-flex: 50%;
           flex: 50%;
-  margin-top: 2rem;
+}
+
+.imgAnswer .row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.imgAnswer .card {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  height: 600px;
+  max-height: 30vh;
+}
+
+.imgAnswer .card:hover {
+  color: white;
+  background-color: #94C6E8;
+}
+
+.imgAnswer .image {
+  border-radius: 1vh;
+  margin: 10%;
+  background-size: cover;
+  background-position: center;
+  width: 80%;
+  height: 80%;
+}
+
+.imgAnswer .row,
+.imgAnswer .col-6,
+.imgAnswer .container-fluid {
+  margin: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 /*# sourceMappingURL=style.css.map */
