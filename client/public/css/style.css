@@ -101,8 +101,17 @@ h5 {
   font-family: "Baloo", cursive;
 }
 
-p {
-  font-family: "Muli", sans-serif;
+.box img{
+
+  height: 300px;
+  width: 300px;  
+}
+.one_question
+{
+  border: 1em;
+  border-color: red;
+   float:left;
+   margin-left: 1em;
 }
 
 a {
@@ -295,4 +304,5 @@ a:focus {
   padding-left: 0px;
   padding-right: 0px;
 }
+
 /*# sourceMappingURL=style.css.map */

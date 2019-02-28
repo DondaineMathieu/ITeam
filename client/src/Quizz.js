@@ -22,8 +22,18 @@ class Question extends Component {
             <form>
                 <div><h1>{q.question}</h1>
                     <h3></h3>
+<<<<<<< HEAD
+                    {q.txtAnswers.map(txt => <div><button className="checkbox">q</button>{txt}</div>)}
+                    {q.imgAnswers.map(img => <div><input type='checkbox' /> <img  src={HTTP_SERVER_PORT_PICTURES + img} /> </div>)}
+
+                    {bp}    {/* Button previous Question */}
+                    <input type="button" value="Validate" onClick={(e) => this.props.Validate(e)} />
+                    {ba}    {/* Button next Question */}
+                    {/* {bv} */}
+=======
                     {q.txtAnswers.map(txt => <div><input type='checkbox' className="myAnswers" /> {txt}</div>)}
                     {q.imgAnswers.map(img => <div><input type='checkbox' className="myAnswers" /> <img src={HTTP_SERVER_PORT_PICTURES + img} /> </div>)}
+>>>>>>> 142abd4cbdf77738ae5302a8f42f512446762577
 
                     {bp}
                     <input type="button" value="Validate" onClick={(e) => this.props.validate(e)} />
@@ -66,7 +76,16 @@ class Quizz extends Component {
         this.setState({ current: newIndex });
     }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+   /* calculScore() {
+        if(this.question.solution == checkedAnswers) {
+            this.prompt.score = this.prompt.score+this.question.points;
+=======
+    Validate() {
+=======
     validate(e) {
+>>>>>>> 142abd4cbdf77738ae5302a8f42f512446762577
         let newState = "validated";
         this.setState({ state: newState });
         let tmp = this.state.toValidate.filter(nb => nb != this.state.current);
@@ -74,6 +93,12 @@ class Quizz extends Component {
         this.setState({current : this.state.current + 1, toValidate : tmp});
     }
 
+<<<<<<< HEAD
+    calculScore() {
+        if (/*this.question.solution == checkedAnswers*/ true) {
+           // this.prompt.score = this.prompt.score + this.question.points;
+>>>>>>> a87042cc9e8d516274552463456bc1024e9a0281
+=======
     calculScore(e) {
         let t = document.getElementsByClassName("myAnswers");
         let rep = [];
@@ -89,8 +114,9 @@ class Quizz extends Component {
             this.setState({
                 score: newScore
             })
+>>>>>>> 142abd4cbdf77738ae5302a8f42f512446762577
         }
-    }
+    }*/
 
     render() {
         if(this.state.quizz==null) {
@@ -130,8 +156,19 @@ class Quizz extends Component {
                     questions={this.state.quizz.questions}
                     nextQuestion={() => this.nextQuestion()}
                     previousQuestion={() => this.previousQuestion()}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                   /* calculScore={() => this.calculScore()}
+                    score={0}*/
+=======
+                    // calculScore={() => this.calculScore()}
+                    score={0}
+                    Validate = {this.Validate}
+>>>>>>> a87042cc9e8d516274552463456bc1024e9a0281
+=======
                     score={0}
                     validate = {this.validate}
+>>>>>>> 142abd4cbdf77738ae5302a8f42f512446762577
                 />
             </div>
         )
